@@ -1,1 +1,0 @@
-# PRESSRUN\n\nAI-powered press kit generator for independent musicians.\n\nBuilt with Next.js 14, Tailwind CSS, Claude API, and Stripe.\n

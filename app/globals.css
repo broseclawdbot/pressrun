@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-brand-black text-brand-white antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-gold hover:bg-brand-gold-light text-brand-black font-bold py-3 px-8 rounded-lg transition-all duration-200 transform hover:scale-105;
+  }
+  .btn-secondary {
+    @apply border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-black font-bold py-3 px-8 rounded-lg transition-all duration-200;
+  }
+  .card {
+    @apply bg-brand-dark border border-brand-dark-gray rounded-2xl p-6;
+  }
+  .input-field {
+    @apply w-full bg-brand-dark-gray border border-brand-dark-gray focus:border-brand-gold rounded-lg px-4 py-3 text-brand-white placeholder-brand-gray outline-none transition-colors;
+  }
+  .textarea-field {
+    @apply w-full bg-brand-dark-gray border border-brand-dark-gray focus:border-brand-gold rounded-lg px-4 py-3 text-brand-white placeholder-brand-gray outline-none transition-colors resize-none;
+  }
+}
+
+/* Gold gradient text */
+.gold-gradient {
+  background: linear-gradient(135deg, #D4AF37 0%, #E8C547 50%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effect */
+.gold-glow {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
+}
+
+/* Subtle grid background */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Pulse animation for CTA */
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+  50% { box-shadow: 0 0 20px 10px rgba(212, 175, 55, 0); }
+}
+.pulse-gold {
+  animation: pulse-gold 2s infinite;
+}
+
+/* Loading spinner */
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 2s linear infinite;
+}
